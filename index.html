@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library-v2</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="header">
+      <h2>Library</h2>
+      <button class="addBookBtn" id="addBtn">Add Book</button>
+    </div>
+
+    <div class="books-container">
+      <div class="books"></div>
+      <form action="#" id="form">
+        <h2>Add book to the library</h2>
+        <div class="form-row">
+          <label for="bookTitle">What is the title of the book?</label>
+          <input type="text" name="book-title" id="bookTitle" required />
+        </div>
+        <div class="form-row">
+          <label for="bookAuthor">Who is the author of the book?</label>
+          <input type="text" name="book-author" id="bookAuthor" required />
+        </div>
+
+        <div class="form-row">
+          <label for="bookPages">How many pages does the book have?</label>
+          <input
+            type="number"
+            name="book-pages"
+            id="bookPages"
+            required
+            min="1"
+          />
+        </div>
+        <div class="form-row">
+          <label for="bookRead">Have you read the book?</label>
+          <select name="bookRead" id="bookRead">
+            <option value="read" selected>I have read the book</option>
+            <option value="unread">I have not read the book</option>
+          </select>
+        </div>
+        <button type="submit" id="saveBtn">Save</button>
+        <button type="button" id="cancelBtn">Cancel</button>
+      </form>
+    </div>
+    <div id="overlay"></div>
+  </body>
+</html>
